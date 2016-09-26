@@ -1,0 +1,6 @@
+{
+    mainOSFile = "../OS.lua",
+    startingBackgrndProcesses = 
+    {
+    }
+}

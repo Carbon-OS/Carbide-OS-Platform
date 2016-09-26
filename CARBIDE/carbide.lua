@@ -32,12 +32,16 @@ for k , v in pairs( config.startingBackgrndProcesses ) do
     file.close( )
 
     print("LOADED: " .. v)
+
+    log( "LOADED: " .. v )
 end
 
 for k, v in pairs( bpc ) do
     table.insert( coros, coroutine.create( v ) )
 
-    print("LOADED AS CORO: " .. bpc[ k ])
+    print( "LOADED AS CORO: " .. bpc[ k ] )
+
+    log( "LOADED AS CORO: " .. bpc[ k ] )
 end
 
 while true do

@@ -48,8 +48,12 @@ while true do
     for k, v in pairs( coros ) do
         if coroutine.status( v ) == "suspended" then
             coroutine.resume( v )
+
+            log( "RESUMED CORO!" )
         elseif coroutine.status( v ) == "dead" then
             coros[ k ] = nil
+
+            log( "CORO DIED!" )
         end
     end
 end
